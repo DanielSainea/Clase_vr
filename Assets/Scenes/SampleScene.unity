@@ -128,6 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 26487265}
+  - component: {fileID: 26487266}
   - component: {fileID: 26487264}
   - component: {fileID: 26487263}
   - component: {fileID: 26487262}
@@ -259,6 +260,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &26487266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26487260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28ab78a16a4d76b438d58c3e280c04d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
+  ObjectToPickUp: {fileID: 0}
+  PickedObject: {fileID: 0}
+  ZonadeInteraccion: {fileID: 934686173}
 --- !u!1 &92404647
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +386,55 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 777224581}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &262934780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 262934782}
+  - component: {fileID: 262934781}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &262934781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262934780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c748c7ee691009419c17d48dcdef127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  sounds:
+  - {fileID: 11400000, guid: af569da28a7e6e4499a0e16e51c99c56, type: 2}
+  - {fileID: 11400000, guid: af569da28a7e6e4499a0e16e51c99c56, type: 2}
+  - {fileID: 11400000, guid: af569da28a7e6e4499a0e16e51c99c56, type: 2}
+  - {fileID: 11400000, guid: af569da28a7e6e4499a0e16e51c99c56, type: 2}
+--- !u!4 &262934782
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262934780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.73852, y: 0.88, z: -3.25115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
@@ -1175,8 +1240,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 777224581}
-  - component: {fileID: 777224584}
   - component: {fileID: 777224585}
+  - component: {fileID: 777224584}
   - component: {fileID: 777224583}
   - component: {fileID: 777224580}
   - component: {fileID: 777224579}
@@ -1327,7 +1392,7 @@ MonoBehaviour:
   Controlador: {fileID: 777224582}
   Velocidad: 15
   Gravedad: -10
-  FuerzaSalto: 1
+  FuerzaSalto: 3
   EnElPiso: {fileID: 1462162308}
   DistanciaDelPiso: 0.2
   Piso:
@@ -1356,12 +1421,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 777224576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28ab78a16a4d76b438d58c3e280c04d5, type: 3}
+  m_Script: {fileID: 11500000, guid: a56239ed8d0143545936b0012e45858c, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PickUpObject
-  ObjectToPickUp: {fileID: 0}
-  PickedObject: {fileID: 0}
-  ZonadeInteraccion: {fileID: 777224581}
+  m_EditorClassIdentifier: Assembly-CSharp::Agarrarobjeto
+  esAgarrable: 1
 --- !u!1 &782259469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2072,3 +2135,4 @@ SceneRoots:
   - {fileID: 1321063072}
   - {fileID: 1176108092}
   - {fileID: 1459808897}
+  - {fileID: 262934782}

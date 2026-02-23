@@ -9,6 +9,7 @@ public class Agarrarobjeto : MonoBehaviour
         if (other.tag == "ZonadeInteraccion")
         {
             other.GetComponentInParent<PickUpObject>().ObjectToPickUp = this.gameObject;
+            AudioManager.instance.Play2D("1");
         }
                         
 
@@ -18,7 +19,7 @@ public class Agarrarobjeto : MonoBehaviour
         if(other.tag == "ZonadeInteraccion")
         {
             other.GetComponentInParent<PickUpObject>().ObjectToPickUp = null;
-
+            AudioManager.instance.Play2D("1");
         }
     }
 }
