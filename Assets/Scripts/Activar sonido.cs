@@ -9,7 +9,7 @@ public class Activarsonido : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            AudioManager.instance.Play2D("Entrar");
+            AudioManager.instance.Play3D("Entrar", post.transform.position);
 
         }
 
